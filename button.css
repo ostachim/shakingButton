@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+button{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%);
+    width:250px;
+    height:80px;
+    font-size:30px;
+    font-family:arial;
+    text-transform:uppercase;
+    border:2px solid black;
+    box-shadow:0 0 0 2px white, 0 0 0 4px black;
+    animation:shakes 5s 0s  infinite;
+    overflow:hidden;
+    cursor:pointer;
+    
+}
+
+button span{
+    display:block;
+    line-height:80px;
+    position:relative;
+    top:0px;
+    transition:1s;
+    left:0;
+}
+
+
+
+button span:nth-child(2){
+    top:-80px;
+    left:250px;
+  
+}
+
+button:hover span:nth-child(1){
+    left:-250px;
+}
+
+button:hover span:nth-child(2){
+    left:0px;
+   
+}
+
+
+
+@keyframes shakes{
+    0%{
+        left:50%;
+    }
+
+    90%{
+        left:50%;
+    }
+    91%{
+        left:calc(50% - 5px);
+    }
+    92%{
+        left:calc(50% + 5px);
+    }
+    93%{
+        left:calc(50% - 5px);
+    }
+    94%{
+        left:calc(50% + 5px);
+    }
+    95%{
+        left:calc(50% - 5px);
+    }
+    96%{
+        left:calc(50% + 5px);
+    }
+    97%{
+        left:calc(50% - 5px);
+    }
+    98%{
+        left:calc(50% + 5px);
+    }
+    99%{
+        left:calc(50% - 5px);
+    }
+    
+    100%{
+        left:50%;
+    }
+}
